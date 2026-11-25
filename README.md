@@ -24,14 +24,40 @@ This repository has the source, code, data and Lean proof for the paper
 nodal domains at λ = 18, 20 and 34. At 20 and 34 the count equals κ(λ), the bound in the
 extended Courant property.</sub></p>
 
-## The problem
+## Background
 
-Courant's theorem says that the n-th Dirichlet eigenfunction of a domain has at most n nodal
-domains. A footnote in Courant–Hilbert claims more: any linear combination of the first n
-eigenfunctions also has at most n nodal domains. This is the extended Courant property (ECP).
-It is false in general, and on the square it had only been checked for the first thirteen
-eigenvalues. This paper proves it on the square at every eigenvalue up to 10⁹ and at every
-sufficiently large eigenvalue.
+In 1923 Courant proved that the n-th Dirichlet eigenfunction of a domain has at most n nodal
+domains. In a footnote of *Methods of Mathematical Physics* (Courant–Hilbert, p. 454 of the
+1953 English edition), the authors claim more: every linear combination of the first n
+eigenfunctions also has at most n nodal domains. This is the extended Courant property (ECP),
+also called the Courant–Herrmann conjecture.
+
+The claim has had a mixed history over the seventy years since:
+
+- **Dimension one:** it is true, by Sturm's theorem.
+- **Higher dimensions:** it is false. Arnold linked it to Hilbert's sixteenth problem and
+  recorded Viro's counterexamples. Bérard and Helffer (2018–2021) found counterexamples on
+  cubes of dimension at least three and on several planar and spherical domains.
+- **The square:** this is the simplest planar case. Gladwell and Zhu (2000–2003) checked the
+  first thirteen eigenvalues by hand and conjectured that ECP holds on every rectangle. Since
+  then, even the weaker bound "at most dim E_λ nodal domains" had been open on the square.
+
+This paper proves that bound at every level. It also proves ECP at every eigenvalue up to 10⁹
+and at every sufficiently large eigenvalue.
+
+## Why it matters
+
+- **Vibrating membranes and quantum states.** The functions `sin(mx) sin(ky)` are the modes of
+  a square drum and the states of a particle in a square box. A combination of them is a drum
+  vibrating at several frequencies at once, or a superposition of states. ECP bounds how many
+  pieces its nodal lines can cut the square into.
+- **Spectral clustering and graph partitioning.** Spectral methods split data or networks using
+  combinations of the first few eigenvectors of a Laplacian, from Fiedler's work on graph cuts
+  to k-means on spectral embeddings. A Courant-type bound for such combinations limits how many
+  pieces they can produce, which links nodal counts to guarantees for these algorithms.
+- **Robust versions.** A coarse version of the footnote, which ignores very small nodal
+  domains, holds in general (Buhovsky et al., 2024). It connects nodal counts to topological
+  persistence. Exact results like this one show what survives without the coarsening.
 
 ## Results
 
