@@ -1,0 +1,46 @@
+ lam   N kappa   U Ecap  verdict    maximiser
+   5   3     2   2    2  tight      line
+   8   4     4   4    4  tight      hline * vline
+  10   6     5   5    8  tight      conic
+  13   8     7   7    8  tight      line * hline * vline
+  17  10     9   8   10  ECP holds  conic * line
+  18  11    11   9   10  ECP holds  poly[(0, 0), (3, 0), (2, 2), (0, 3)]
+  20  13    12  12   12  tight      conic * hline * vline
+  25  15    14  14   12  tight      line * hline * hline * vline * vline
+  26  17    16  15   16  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)]
+  29  19    18  17   16  ECP holds  conic * line * hline * vline
+  32  20    20  18   16  ECP holds  poly[(0, 0), (3, 0), (2, 2), (0, 3)] * hline * vline
+  34  22    21  21   16  tight      conic * hline * hline * vline * vline
+  37  24    23  21   18  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * line
+  40  26    25  24   20  ECP holds  conic * conic * hline * vline
+  41  28    27  26   20  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * hline * vline
+  45  30    29  28   20  ECP holds  conic * line * hline * hline * vline * vline
+  50  33    31  31   24  tight      poly[(0, 0), (2, 0), (0, 4)] * poly[(0, 0), (4, 0), (0, 2)]
+  52  35    34  33   24  ECP holds  poly[(0, 0), (4, 0), (3, 3), (0, 4)] * conic
+  53  37    36  34   24  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * line * hline * vline
+  58  39    38  37   24  ECP holds  conic * conic * hline * hline * vline * vline
+  61  41    40  39   24  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * hline * hline * vline * vline
+  65  45    42  42   26  tight      poly[(0, 0), (4, 0), (3, 3), (0, 4)] * conic * line
+  68  47    46  44   28  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * conic * hline * vline
+  72  48    48  46   28  ECP holds  poly[(0, 0), (2, 0), (0, 4)] * poly[(0, 0), (4, 0), (0, 2)] * hline * vline
+  73  50    49  48   28  ECP holds  poly[(0, 0), (5, 0), (3, 3), (0, 5)] * hline * hline * vline * vline
+  74  52    51  49   28  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * line * hline * hline * vline * vline
+  80  54    53  52   28  ECP holds  conic * conic * hline * hline * hline * vline * vline * vline
+  82  56    55  53   32  ECP holds  poly[(0, 0), (4, 0), (3, 3), (0, 4)] * conic * conic
+  85  60    57  57   32  tight      poly[(0, 0), (2, 0), (0, 4)] * poly[(0, 0), (4, 0), (0, 2)] * line * hline * vline
+  89  62    61  59   32  ECP holds  poly[(0, 0), (4, 0), (3, 3), (0, 4)] * conic * line * hline * vline
+  90  64    63  61   32  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * conic * hline * hline * vline * vline
+  97  66    65  63   32  ECP holds  conic * conic * line * hline * hline * hline * vline * vline * vline
+  98  67    67  65   32  ECP holds  poly[(0, 0), (5, 0), (3, 3), (0, 5)] * hline * hline * hline * vline * vline * vline
+ 100  69    68  66   32  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * line * hline * hline * hline * vline * vline * vline
+ 101  71    70  67   34  ECP holds  poly[(0, 0), (4, 0), (3, 3), (2, 5), (0, 6)] * poly[(0, 0), (4, 0), (3, 1), (0, 2)] * line
+ 104  73    72  70   36  ECP holds  poly[(0, 0), (2, 0), (0, 4)] * poly[(0, 0), (4, 0), (0, 2)] * conic * hline * vline
+ 106  75    74  72   36  ECP holds  poly[(0, 0), (4, 0), (3, 3), (0, 4)] * conic * conic * hline * vline
+ 109  77    76  73   36  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * conic * line * hline * hline * vline * vline
+ 113  79    78  76   36  ECP holds  poly[(0, 0), (2, 0), (0, 4)] * poly[(0, 0), (4, 0), (0, 2)] * line * hline * hline * vline * vline
+ 116  81    80  79   36  ECP holds  poly[(0, 0), (6, 0), (4, 3), (3, 4), (0, 6)] * hline * hline * hline * vline * vline * vline
+ 117  83    82  80   36  ECP holds  poly[(0, 0), (4, 0), (3, 2), (2, 3), (0, 4)] * conic * hline * hline * hline * vline * vline * vline
+ 122  85    84  81   40  ECP holds  poly[(0, 0), (4, 0), (3, 3), (2, 5), (0, 6)] * poly[(0, 0), (4, 0), (3, 1), (0, 2)] * conic
+ 125  89    86  85   40  ECP holds  poly[(0, 0), (4, 0), (3, 3), (0, 4)] * conic * conic * line * hline * vline
+ 128  90    90  87   40  ECP holds  poly[(0, 0), (6, 0), (5, 3), (3, 6), (0, 8)] * poly[(0, 0), (3, 0), (0, 1)] * hline * vline
+ 130  94    91  91   40  tight      poly[(0, 0), (2, 0), (0, 4)] * poly[(0, 0), (4, 0), (0, 2)] * conic * hline * hline * vline * vline

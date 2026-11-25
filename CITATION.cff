@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "The extended Courant property, Part I: code, data and Lean proof"
+authors:
+  - family-names: Sanayei
+    given-names: Armaun
+repository-code: "https://github.com/asanayei/extended-courant-square"
+version: 1.0.0
+date-released: 2026-11-25
+license: MIT
+preferred-citation:
+  type: article
+  title: "The extended Courant property, Part I: nodal domains of linear combinations of eigenfunctions on the square"
+  authors:
+    - family-names: Sanayei
+      given-names: Armaun
+  year: 2026

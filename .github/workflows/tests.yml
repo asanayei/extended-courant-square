@@ -1,0 +1,23 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - run: cd python && python -m pytest -q
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make -C c
+      - name: both sweep programs agree up to 10^7 with no failures
+        run: |
+          OMP_NUM_THREADS=4 c/hsweep2 10000000 | tee s2.txt
+          OMP_NUM_THREADS=4 c/hsweep_fast 10000000 | tee s1.txt
+          grep -q "fails=0" s2.txt && grep -q "fails=0" s1.txt
+          diff <(grep -o 'levels=[0-9]*' s1.txt) <(grep -o 'levels=[0-9]*' s2.txt)
+      - run: g++ -O2 -std=c++17 -o cpp/lb cpp/lb.cpp && cpp/lb bf 100

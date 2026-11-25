@@ -1,0 +1,10 @@
+X=100000000 fails=0 sumH=17567394978 sumr=78529763
+[1e0,1e1): levels=3 min slack=0 at 2
+[1e1,1e2): levels=31 min slack=0 at 10
+[1e2,1e3): levels=274 min slack=0 at 130
+[1e3,1e4): levels=2382 min slack=0 at 1105
+[1e4,1e5): levels=21183 min slack=6 at 18850
+[1e5,1e6): levels=192034 min slack=24 at 107185
+[1e6,1e7): levels=1768321 min slack=66 at 1204450
+[1e7,1e8): levels=16470067 min slack=169 at 10062130
+[1e8,1e9): levels=1 min slack=618 at 100000000
